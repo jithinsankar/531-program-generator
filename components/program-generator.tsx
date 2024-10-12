@@ -14,9 +14,13 @@ import { InfoIcon } from 'lucide-react'
 type Lift = 'Squat' | 'Bench Press' | 'Deadlift' | 'Overhead Press'
 type Unit = 'lbs' | 'kg'
 
+interface MaxLifts {
+  [key: string]: number
+}
 
-type MaxLifts = Record<Lift, number>
-type EnabledLifts = Record<Lift, boolean>
+interface EnabledLifts {
+  [key: string]: boolean
+}
 
 const TRAINING_MAX_PERCENTAGE = 0.9
 const WEEK_PERCENTAGES = [
@@ -202,7 +206,7 @@ export default function ProgramGenerator() {
             <InfoIcon className="h-4 w-4" />
             <AlertTitle>Tip</AlertTitle>
             <AlertDescription>
-              After completing the 4-week cycle, increase your Training Max (TM) as suggested in the  &quot;Next Cycle&quot; column for continued progress.
+              After completing the 4-week cycle, increase your Training Max (TM) as suggested in the &quot;Next Cycle&quot; column for continued progress.
             </AlertDescription>
           </Alert>
         </div>
