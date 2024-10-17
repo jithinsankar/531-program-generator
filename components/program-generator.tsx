@@ -9,7 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Switch } from "@/components/ui/switch"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { InfoIcon } from 'lucide-react'
+import { InfoIcon, Star } from 'lucide-react'
 
 type Lift = 'Squat' | 'Bench Press' | 'Deadlift' | 'Overhead Press'
 type Unit = 'lbs' | 'kg'
@@ -131,7 +131,7 @@ export default function ProgramGenerator() {
     <div className="container mx-auto p-4 max-w-4xl">
       <Card>
         <CardHeader>
-          <CardTitle>5/3/1 Program Generator</CardTitle>
+          <CardTitle className='text-3xl'>5/3/1 Program Generator</CardTitle>
           <CardDescription>Enter your one-rep max (1RM) for each lift to generate your 4-week 5/3/1 program.</CardDescription>
         </CardHeader>
         <CardContent>
@@ -209,8 +209,31 @@ export default function ProgramGenerator() {
               After completing the 4-week cycle, increase your Training Max (TM) as suggested in the &quot;Next Cycle&quot; column for continued progress.
             </AlertDescription>
           </Alert>
+          
         </div>
       )}
+
+
+          <Alert className="mt-4">
+            <InfoIcon className="h-4 w-4" />
+            <AlertTitle>Tip</AlertTitle>
+            <AlertDescription>
+              After completing the 4-week cycle, increase your Training Max (TM) as suggested in the &quot;Next Cycle&quot; column for continued progress.
+            </AlertDescription>
+          </Alert>
+
+ <Alert className="mt-4">
+  <Star className="h-4 w-4" />
+  <h1 className='text-lg font-bold'>Boost Your Strength with the 5/3/1 Workout Program</h1>
+  <AlertDescription className='mt-4'>
+    The <strong>5/3/1 workout program</strong> is one of the most effective strength training systems, focusing on core compound lifts like the <strong>squat</strong>, <strong>deadlift</strong>, <strong>bench press</strong>, and <strong>overhead press</strong>. Designed by Jim Wendler, this program uses calculated percentages of your <strong>Training Max (TM)</strong> to ensure progressive overload and consistent gains over time.
+    <br /><br />
+    Each 4-week cycle involves incremental increases to your TM, allowing you to <strong>build muscle</strong> and <strong>increase strength</strong> while minimizing the risk of injury. To keep progressing, adjust your Training Max as recommended at the end of each cycle.
+    <br /><br />
+    Whether you&quot;re new to lifting or an advanced athlete, the 5/3/1 method provides a simple yet effective framework for long-term success. Follow the principles, stay consistent, and experience steady growth in your strength levels.
+  </AlertDescription>
+</Alert>
+
     </div>
   )
 }
